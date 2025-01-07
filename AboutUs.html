@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPSI - About Us</title>
+    <style>
+        :root {
+            --primary-green: #007a4d;
+            --light-green: #e6f3ed;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .header {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            position: relative;
+            padding: 5px 15px;
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: black;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: black;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .about-hero {
+            background-color: var(--light-green);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            color: var(--primary-green);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .team-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        .team-member h3 {
+            color: var(--primary-green);
+            margin: 1rem 0;
+        }
+
+        .team-member .title {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .location-link {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .location-link:hover {
+            color: var(--light-green);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <header class="header">
+        <nav class="nav">
+            <h2>CPSI</h2>
+            <div class="nav-links">
+                <a href="MainActivity.html">Home</a>
+                <a href="AboutUs.html">About</a>
+                <a href="Careers.html">Careers</a>
+                <a href="Contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="about-hero">
+        <h1>Our Team</h1>
+        <p>Meet the dedicated professionals behind Carolina Piping Systems Inc.</p>
+    </section>
+
+    <section class="team-section">
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="/api/placeholder/200/200" alt="Mark Wilkinson">
+                <h3>Mark Wilkinson</h3>
+                <div class="title">Owner</div>
+                <p>[Mark's bio will go here]</p>
+            </div>
+
+            <div class="team-member">
+                <img src="/api/placeholder/200/200" alt="Johnny Wilkinson">
+                <h3>Johnny Wilkinson</h3>
+                <div class="title">Owner</div>
+                <p>[Johnny's bio will go here]</p>
+            </div>
+
+            <div class="team-member">
+                <img src="/api/placeholder/200/200" alt="Jason Wilkinson">
+                <h3>Jason Wilkinson</h3>
+                <div class="title">Owner</div>
+                <p>[Jason's bio will go here]</p>
+            </div>
+
+            <div class="team-member">
+                <img src="/api/placeholder/200/200" alt="Buddy Wilson">
+                <h3>Buddy Wilson</h3>
+                <div class="title">Construction Manager</div>
+                <p>[Buddy's bio will go here]</p>
+            </div>
+
+            <div class="team-member">
+                <img src="/api/placeholder/200/200" alt="Emily">
+                <h3>Emily Glover</h3>
+                <div class="title">Business Administrator</div>
+                <p>[Emily's bio will go here]</p>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h3>Contact Us</h3>
+                <p>Email: carolinapipingbusiness@gmail.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div>
+                <h3><a href="https://maps.google.com/?q=3716+Performance+Rd,+Charlotte,+NC+28214" class="location-link">Location</a></h3>
+                <p>3716 Performance Rd</p>
+                <p>Charlotte, NC 28214</p>
+            </div>
+            <div>
+                <h3>Hours</h3>
+                <p>Monday - Thursday: 9:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
